@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">DG</a>
+            </div>
+			<div class="lang">
+				<a href="https://danielestebangonzalezzuluaga.000webhostapp.com/index.html" language='spanish'>SPA</a>
+				<a href="https://danielestebangonzalezzuluaga.000webhostapp.com/index_eng.html" language='english'>ENG</a>
+			</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="">
+            </div>
+            <h1>DANIEL GONZÁLEZ</h1>
+            <h2>Ingeniero Electrónico -  Programador en Python</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100000077923923" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-esteban-gonz%C3%A1lez-zuluaga-086327180/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/danizu001" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Daniel González.</span> Soy una persona eficiente con diferentes habilidades de aprendizaje y disposición para trabajar en equipo. Tengo casi 3 años de experiencia en la automatización y desarrollo ETL, usando Python (Pandas, NumPy, librerías Apis, openpyxl y más). Tengo un interés personal en seguir aprendiendo sobre ciencia de datos y automatizaciones, es por eso que estoy orientando mi camino de aprendizaje hacia la inteligencia de negocios y la inteligencia artificial. Además, mi dominio de SQL y github añade otras dimensiones de mi conjunto de habilidades, proporcionando valiosos conocimientos y contribuciones a mi rol potencial.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            01-12-1996
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +57 3156499752
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            danygonza961201@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            Por definir
+                        </li>
+                        <li>
+                            <strong>Residencia</strong>
+                            Cedritos, Bogota-Colombia
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Technical analyst</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>FUTBOL</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-chess-board"></i>
+                            <span>JUEGOS DE MESA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="HV">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+            <script>
+                // Obtener el botón y agregar un evento de clic
+                document.getElementById('HV').addEventListener('click', function() {
+                    // Crear un enlace temporal
+                    var enlace = document.createElement('a');
+            
+                    // Establecer la URL del archivo que se va a descargar
+                    enlace.href = 'DANIEL ENG 2024.pdf';
+            
+                    // Establecer el nombre del archivo que se descargará (puedes cambiarlo)
+                    enlace.download = 'CV_DanielGonzalez.pdf';
+
+                    var nuevaVentana = window.open();
+                    nuevaVentana.document.body.appendChild(enlace);
+                    // Simular un clic en el enlace para iniciar la descarga
+                    enlace.click();
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <div class="top">
+                            <span>Python</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="skill">
+                        <span>R</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Git</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>40%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Domo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Responsabilidad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Innovación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="top">
+                            <span>Inglés</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Ingeniería Electrónica</h4>
+                        <span class="casa">Pontificia Universidad Javeriana</span>
+                        <span class="fecha">2015 - 2020</span>
+                        <p>Tesis: Utilizar el Internet de las cosas (IoT) con Python y Firebase para medir la calidad de conducción de Transmilenio. El procesamiento de los datos se realizó en Python y luego recibimos los datos en Firebase para mostrarlos en una página web que creamos con Bootstrap.</p>
+                        <a href="https://wallet.xertify.co/certificates/FEF6DA2DA001?r=1" target="_blank">Click para ver Certificado</a>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Maestría en Inteligencia Artificial</h4>
+                        <span class="casa">Pontificia Universidad Javeriana</span>
+                        <span class="fecha">2024 - 2026</span>
+                        <p>Próximamente podrás encontrar el certificado y la tesis. &#128512;</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Maestría en Analítica para la Inteligencia de Negocios</h4>
+                        <span class="casa">Pontificia Universidad Javeriana</span>
+                        <span class="fecha">2024 - 2026</span>
+                        <p>Próximamente podrás encontrar el certificado y la tesis. 😳</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Software Developer Internship</h4>
+                        <span class="casa">BBVA</span>
+                        <span class="fecha">2020</span>
+                        <p>Colaborar y asistir en proyectos de desarrollo para la aplicación móvil del BBVA, mejorando la seguridad y calidad para los clientes. Mi mejor logro fue crear junto con mi compañero una de las funcionalidades que actualmente se encuentra en funcionamiento en la aplicación móvil. La verificación de dispositivos de confianza, detectando si el inicio de sesión en un dispositivo es confiable o no, evitando estafas y fraudes. Usando JAVA y C.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Technical analyst</h4>
+                        <span class="casa">CSG</span>
+                        <span class="fecha">2021 - Actualidad</span>
+                        <p>Comencé a gestionar el proceso de facturación de algunas compañías de telecomunicaciones en los Estados Unidos, como Peerless, Inteliquent, GCI, y otras más. Analizamos muchas hojas de cálculo de Excel, PDF y utilizamos aplicaciones de CSG. Por esa razón, me encargué de automatizar la mayor parte de los procesos manuales en nuestra área con Python, también de mantener actualizadas y funcionando las aplicaciones que creamos, y realizar algunos cambios en la base de datos de Oracle. Mi logro más grande en esta empresa fue crear dos aplicaciones con mi compañero de trabajo en Python para automatizar la mayor parte de los procesos en el proyecto, ahorrando al menos 1 día semanal de operaciones manuales. Actualmente, estas aplicaciones se utilizan en toda el área.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="explicacion"> 
+                <p>Estos proyectos citados abajo son hechos en la mayoría con Python y R, algunos son funcionales y puedes correrlos en tu PC como un ejecutable, por otro lado también hay proyectos de análitica enfocada a crecimiento de negocios. Adentro de cada proyecto verás un .Readme explicando que hace. Espero llenar esta parte de proyectos y que estos programas puedan servir para muchas personas</p>
+            </div>
+            <div class="galeria">
+				<a href="https://github.com/danizu001/PC-Cleaner" target="_blank">
+					<div class="proyecto">
+						<img src="img/p2.jpg" alt="">
+						<div class="overlay">
+							<h3>Manejo de archivos</h3>
+							<p>Limpieza PC</p>
+						</div>
+					</div>
+				</a>
+				<a href="https://github.com/danizu001/Banking-clustering" target="_blank">
+					<div class="proyecto">
+						<img src="img/cluster.png" alt="">
+						<div class="overlay">
+							<h3>Clustering</h3>
+							<p>Banking business</p>
+						</div>					
+					</div>
+				</a>
+                <a href="https://github.com/danizu001/Apriori_MarketCase" target="_blank">
+					<div class="proyecto">
+						<img src="img/Apriori.jpg" alt="">
+						<div class="overlay">
+							<h3>Apriori</h3>
+							<p>Instakart model</p>
+						</div>					
+					</div>
+				</a>
+                <a href="https://github.com/danizu001/RegresionLinealModa" target="_blank">
+					<div class="proyecto">
+						<img src="img/Reglin.jpg" alt="">
+						<div class="overlay">
+							<h3>Regresión lineal</h3>
+							<p>Predicción de precio</p>
+						</div>					
+					</div>
+				</a>
+                <a href="https://github.com/danizu001/LogisticRegression_Tel" target="_blank">
+					<div class="proyecto">
+						<img src="img/Logit.jpg" alt="">
+						<div class="overlay">
+							<h3>Regresión logística</h3>
+							<p>Predicción deserción</p>
+						</div>					
+					</div>
+				</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100000077923923" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-esteban-gonz%C3%A1lez-zuluaga-086327180/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/danizu001" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
